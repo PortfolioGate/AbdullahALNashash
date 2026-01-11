@@ -22,10 +22,11 @@
             --primary-dark: #020617;
             --primary-light: #f8fafc;
             
-            /* Safety/Corporate Blue Theme */
-            --accent-main: #3b82f6; 
-            --accent-glow: rgba(59, 130, 246, 0.5);
-            --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            /* EHS Theme - Safety Green */
+            /* Changed from Blue to Emerald Green for Safety/Environment feel */
+            --accent-main: #10b981; 
+            --accent-glow: rgba(16, 185, 129, 0.5);
+            --accent-gradient: linear-gradient(135deg, #10b981 0%, #34d399 100%);
             
             --glass-border: rgba(255, 255, 255, 0.08);
             --glass-surface: rgba(255, 255, 255, 0.03);
@@ -33,7 +34,7 @@
             
             --text-primary: #f1f5f9;
             --text-secondary: #94a3b8;
-            --text-accent: #60a5fa;
+            --text-accent: #34d399;
 
             --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
             --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
@@ -48,7 +49,7 @@
             --text-secondary: #475569;
             --glass-border: rgba(0, 0, 0, 0.05);
             --glass-surface: rgba(255, 255, 255, 0.6);
-            --accent-glow: rgba(59, 130, 246, 0.2);
+            --accent-glow: rgba(16, 185, 129, 0.2);
         }
 
         /* Reset & Base */
@@ -140,7 +141,7 @@
             transform: translateY(20px);
             pointer-events: none;
             transition: all 0.5s var(--ease-elastic);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+            box-shadow: 0 10px 30px var(--accent-glow);
             padding: 1rem 2rem; 
         }
         #floating-cv.visible {
@@ -373,10 +374,19 @@
         .footer-cta h2 { font-size: 3.5rem; margin-bottom: 20px; }
         
         .contact-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 50px; flex-wrap: wrap; }
-        .contact-pill {
-            padding: 15px 30px; border-radius: 50px; border: 1px solid var(--glass-border);
-            color: var(--text-secondary); transition: 0.3s; display: flex; align-items: center; gap: 10px;
-        }
+       .contact-pill {
+    padding: 14px 32px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: #e5e7eb;
+    background: rgba(255,255,255,0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    backdrop-filter: blur(6px);
+    text-decoration: none;
+}
         .contact-pill:hover { background: var(--accent-main); color: white; border-color: var(--accent-main); }
         
         .copy-feedback {
@@ -390,7 +400,7 @@
             position: absolute; top: 40px; right: 40px;
             display: flex; align-items: center; gap: 10px; color: var(--text-secondary); font-size: 0.9rem;
         }
-        .status-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; box-shadow: 0 0 10px #22c55e; animation: pulse 2s infinite; }
+        .status-dot { width: 8px; height: 8px; background: var(--accent-main); border-radius: 50%; box-shadow: 0 0 10px var(--accent-main); animation: pulse 2s infinite; }
         @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
 
         /* * ------------------------------------------------------------------
@@ -455,6 +465,7 @@
 
     <a href="https://github.com/PortfolioGate/AbdullahALNashash/blob/main/Abdullah%20Alnashash%20EHS%20Manager%202026.pdf" 
        target="_blank" 
+       download="Abdullah_Alnashash_EHS_CV.pdf"
        id="floating-cv" 
        class="btn-main hover-trigger">
        Download CV <i class="fas fa-download"></i>
@@ -505,6 +516,7 @@
             <div style="display:flex; gap:20px; flex-wrap:wrap; justify-content:center;">
                 <a href="https://github.com/PortfolioGate/AbdullahALNashash/blob/main/Abdullah%20Alnashash%20EHS%20Manager%202026.pdf" 
                    target="_blank" 
+                   download="Abdullah_Alnashash_EHS_CV.pdf"
                    class="btn-main hover-trigger">
                     Download CV <i class="fas fa-download"></i>
                 </a>
@@ -560,7 +572,7 @@
             <div class="glass-panel" style="padding: 3rem; text-align: center; max-width: 900px; margin: 0 auto;">
                 <p style="font-size: 1.25rem; line-height: 1.8; color: var(--text-secondary);">
                     I am an <strong style="color:var(--text-primary)">EHS Manager</strong> with over 15 years of experience in successfully implementing comprehensive management systems across various industries. 
-                    My expertise lies in leveraging scientific knowledge to foster <span style="text-decoration: underline; text-decoration-color: var(--accent-main);">sustainable resource management</span>, mitigate environmental risks, and ensure workplace health and safety compliance with global standards including OSHA and NEBOSH.
+                    My expertise lies in leveraging practical experience and scientific knowledge to foster <span style="text-decoration: underline; text-decoration-color: var(--accent-main);">sustainable resource management</span>, mitigate environmental risks, and ensure workplace health and safety compliance with global standards including OSHA, ISO, and NEBOSH.
                 </p>
             </div>
         </div>
@@ -603,6 +615,26 @@
                         Oversaw safety programs for construction sites. Conducted risk assessments and hazard identification. Delivered toolbox talks and safety training to subcontractors.
                     </p>
                 </div>
+
+                <div class="step-item">
+                    <div class="step-marker"></div>
+                    <span class="step-date">2016 – 2018</span>
+                    <h3 class="step-role">Safety Officer</h3>
+                    <div class="step-company"><i class="fas fa-hard-hat"></i> JV (CCC, Drake and Scull, Arabtic)</div>
+                    <p style="color: var(--text-secondary); max-width: 600px; line-height: 1.6;">
+                        Saraya Aqaba Project (5 Stars Hotel). Managed safety for civil and steel construction works involving over 2000 employees.
+                    </p>
+                </div>
+
+                 <div class="step-item">
+                    <div class="step-marker"></div>
+                    <span class="step-date">2014 – 2016</span>
+                    <h3 class="step-role">HSE Supervisor</h3>
+                    <div class="step-company"><i class="fas fa-battery-full"></i> Hoppecke / AMAG</div>
+                    <p style="color: var(--text-secondary); max-width: 600px; line-height: 1.6;">
+                        Manufacturing of lead and acid batteries. Served as Internal Auditor (QMS, EMS, HSE) and Management Representative for ISO 9001:2015.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -641,7 +673,7 @@
 
                 <div class="spotlight-card">
                     <i class="fas fa-leaf" style="font-size: 2rem; color: var(--accent-main); margin-bottom: 20px;"></i>
-                    <h3>Sustainability</h3>
+                    <h3>Sustainability & Special</h3>
                     <div style="margin-top: 15px;">
                         <span class="skill-pill">Waste Management</span>
                         <span class="skill-pill">Pollution Prevention</span>
